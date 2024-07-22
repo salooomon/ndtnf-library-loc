@@ -24,6 +24,7 @@
 
 
 ```ts
+'решение находиться по пути libraryapp/container/container.js'
 container.bind(BooksRepository).toSelf()
 ```
 </details>
@@ -35,7 +36,7 @@ container.bind(BooksRepository).toSelf()
 <summary>Как должно выглядеть использование:</summary>
 
 ```typescript
-
+'решение: изменены роуты в файле libraryapp/regulator/book/apiBook.js'
 router.get(':id', async (req, res, next) => {
   const repo = container.get(BooksRepository);
   const book = await repo.getBook(req.params.id);
@@ -45,3 +46,5 @@ router.get(':id', async (req, res, next) => {
 
 В примере для простоты опущены преобразования типов и обработка ошибок.
 </details>
+
+
